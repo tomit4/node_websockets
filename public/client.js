@@ -2,6 +2,7 @@ const connection = new WebSocket('ws://localhost:8080')
 const button = document.querySelector('#send')
 const name = document.querySelector('#name')
 const message = document.querySelector('#message')
+const chat = document.querySelector('#chat')
 
 connection.onopen = event => {
     console.log('WebSocket is open now.')
@@ -16,7 +17,6 @@ connection.onerror = event => {
 }
 
 connection.onmessage = event => {
-    const chat = document.querySelector('#chat')
     chat.innerHTML += event.data
 }
 
