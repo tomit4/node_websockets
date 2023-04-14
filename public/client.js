@@ -1,5 +1,7 @@
 const connection = new WebSocket('ws://localhost:8080')
 const button = document.querySelector('#send')
+const name = document.querySelector('#name')
+const message = document.querySelector('#message')
 
 connection.onopen = event => {
     console.log('WebSocket is open now.')
@@ -19,8 +21,6 @@ connection.onmessage = event => {
 }
 
 button.addEventListener('click', () => {
-    const name = document.querySelector('#name')
-    const message = document.querySelector('#message')
     const data = `<p>${name.value}: ${message.value}</p>`
     connection.send(data)
     name.value = ''

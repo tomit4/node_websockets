@@ -7,10 +7,16 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
+        <form>
+            <label for="name">Name: </label>
+            <input id="name" type="text" placeholder="name" required>
+            <br>
+            <br>
+            <label for="message">Chat: </label>
+            <input id="message" type="text" placeholder="message" required>
+            <button id="send">Send</button>
+        </form>
         <div id="chat"></div>
-        <input id="name" type="text" placeholder = "name">
-        <input id="message" type="text" placeholder = "message">
-        <button id="send">Send</button>
 
         <script src="client.js"></script>
     </body>
