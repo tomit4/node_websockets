@@ -12,6 +12,7 @@ const wss = new WebSocket.Server({ server })
 app.use(express.static(path.join(__dirname, 'public')))
 // app.use('/v1', route)
 
+// Ideally you set this up as a separate server
 route.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`)
 })
